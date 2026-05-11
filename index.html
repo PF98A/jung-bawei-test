@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>极简荣格八维测试</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- 首页 -->
+    <section id="homePage" class="page active">
+      <div class="hero card">
+        <div class="eyebrow">Jung Cognitive Functions</div>
+        <h1>极简荣格八维测试</h1>
+        <p class="subtitle">用少量关键题，快速了解你的认知功能倾向。</p>
+        <p class="muted">
+          本测试适合新手入门，结果仅供自我观察，不代表专业心理测评。
+        </p>
+        <div class="home-actions">
+          <button id="startBtn" class="primary-btn">开始测试</button>
+          <button id="viewLastBtn" class="secondary-btn hidden">查看上次结果</button>
+        </div>
+        <p id="lastResultHint" class="muted last-result-hint hidden"></p>
+      </div>
+
+      <div class="card small-note">
+        <h3>你会看到什么？</h3>
+        <p>测试完成后，会看到你的可能类型、主导/辅助/第三/第四功能、八维得分和简单解释。</p>
+      </div>
+    </section>
+
+    <!-- 测试页 -->
+    <section id="testPage" class="page">
+      <div class="card">
+        <div class="test-top">
+          <div>
+            <div id="questionCount" class="eyebrow">第 1 / 16 题</div>
+            <h2 id="questionText">题目加载中...</h2>
+          </div>
+          <button id="restartBtnTop" class="ghost-btn">重新测试</button>
+        </div>
+
+        <div class="progress-wrap" aria-label="测试进度">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+
+        <div id="optionsWrap" class="options"></div>
+
+        <div class="nav-row">
+          <button id="prevBtn" class="secondary-btn">上一题</button>
+          <button id="nextBtn" class="primary-btn">下一题</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 低可信度确认页 -->
+    <section id="confirmPage" class="page">
+      <div class="card confirm-card">
+        <div class="pill warn">结果接近</div>
+        <h2>你的结果比较接近</h2>
+        <p>
+          说明你可能处在类型边界。再回答 6 道确认题，可以让结果更稳定。
+        </p>
+        <div class="confirm-actions">
+          <button id="continueConfirmBtn" class="primary-btn">继续确认</button>
+          <button id="showDirectBtn" class="secondary-btn">直接看结果</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 结果页 -->
+    <section id="resultPage" class="page">
+      <div id="resultContent"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
