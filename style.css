@@ -489,3 +489,144 @@ button:disabled {
     width: 100%;
   }
 }
+
+
+/* =========================
+   主题切换：浅色 / 偏黑色
+   ========================= */
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  border: 1px solid rgba(124, 77, 255, 0.18);
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--purple-dark);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 24px rgba(40, 31, 72, 0.10);
+  padding: 9px 14px;
+  font-size: 14px;
+}
+
+[data-theme="dark"] {
+  --bg: #0d1117;
+  --card: #151a23;
+  --text: #eef2f7;
+  --muted: #9aa4b2;
+  --line: #252b36;
+  --purple: #a78bfa;
+  --purple-dark: #c4b5fd;
+  --purple-soft: rgba(167, 139, 250, 0.14);
+  --yellow-soft: rgba(245, 158, 11, 0.12);
+  --yellow-line: rgba(245, 158, 11, 0.38);
+  --shadow: 0 18px 48px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 77, 255, 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.08), transparent 28%),
+    var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .card {
+  background: rgba(21, 26, 35, 0.92);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .subtitle,
+[data-theme="dark"] .result-subtitle,
+[data-theme="dark"] .type-desc,
+[data-theme="dark"] .simple {
+  color: #d8dee9;
+}
+
+[data-theme="dark"] .small-note,
+[data-theme="dark"] .function-card,
+[data-theme="dark"] .eight-card,
+[data-theme="dark"] .meaning-item,
+[data-theme="dark"] .rank-item,
+[data-theme="dark"] .option {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: rgba(255, 255, 255, 0.09);
+  color: var(--text);
+}
+
+[data-theme="dark"] .option .label {
+  background: rgba(167, 139, 250, 0.18);
+  color: #ddd6fe;
+}
+
+[data-theme="dark"] .option.selected {
+  background: rgba(167, 139, 250, 0.16);
+  border-color: rgba(167, 139, 250, 0.85);
+}
+
+[data-theme="dark"] .progress-wrap,
+[data-theme="dark"] .bar-bg {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+[data-theme="dark"] .ghost-btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .secondary-btn {
+  background: rgba(167, 139, 250, 0.14);
+  color: #ddd6fe;
+}
+
+[data-theme="dark"] .tag,
+[data-theme="dark"] .keyword {
+  background: rgba(167, 139, 250, 0.16);
+  color: #ddd6fe;
+}
+
+[data-theme="dark"] .close-alert,
+[data-theme="dark"] .confirm-card {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.35);
+  color: #f8d48a;
+}
+
+[data-theme="dark"] .pill.warn {
+  background: rgba(245, 158, 11, 0.18);
+  color: #f8d48a;
+}
+
+[data-theme="dark"] .pill.mid {
+  background: rgba(167, 139, 250, 0.16);
+  color: #ddd6fe;
+}
+
+[data-theme="dark"] .pill.good {
+  background: rgba(34, 197, 94, 0.16);
+  color: #86efac;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: rgba(21, 26, 35, 0.88);
+  color: #ddd6fe;
+  border-color: rgba(167, 139, 250, 0.30);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+}
+
+[data-theme="dark"] .nav-row {
+  background: linear-gradient(to top, var(--bg) 78%, rgba(13, 17, 23, 0));
+}
+
+@media (max-width: 620px) {
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+}

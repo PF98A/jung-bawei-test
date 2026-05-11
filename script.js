@@ -712,3 +712,34 @@ continueConfirmBtn.addEventListener("click", addConfirmQuestions);
 showDirectBtn.addEventListener("click", showDirectResult);
 
 initHomeLastResult();
+
+
+// =========================
+// 主题切换：浅色 / 偏黑色
+// =========================
+const THEME_KEY = "jung_bawei_theme";
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem(THEME_KEY, theme);
+
+  const btn = document.getElementById("themeToggle");
+  if (btn) {
+    btn.textContent = theme === "dark" ? "☀️ 浅色" : "🌙 深色";
+  }
+}
+
+function initTheme() {
+  const savedTheme = localStorage.getItem(THEME_KEY) || "light";
+  applyTheme(savedTheme);
+
+  const btn = document.getElementById("themeToggle");
+  if (btn) {
+    btn.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme") || "light";
+      applyTheme(current === "dark" ? "light" : "dark");
+    });
+  }
+}
+
+initTheme();
