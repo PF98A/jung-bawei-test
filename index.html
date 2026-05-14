@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>极简荣格八维测试</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="enhancements.css" />
 </head>
 <body>
   <button id="themeToggle" class="theme-toggle" type="button" aria-label="切换界面颜色">🌙 深色</button>
@@ -18,6 +19,14 @@
         <p class="muted">
           本测试适合新手入门，结果仅供自我观察，不代表专业心理测评。
         </p>
+        <div class="home-notice" aria-label="测试说明">
+          <h3>开始前请先知道</h3>
+          <ul>
+            <li>这不是官方 MBTI，也不是心理诊断，只适合用来自我探索。</li>
+            <li>结果会受当下状态、理解偏差和题目数量影响，不一定稳定。</li>
+            <li>建议重点看功能倾向和前三个可能类型，不要把类型当成固定标签。</li>
+          </ul>
+        </div>
         <div class="home-actions">
           <button id="startBtn" class="primary-btn">开始测试</button>
           <button id="viewLastBtn" class="secondary-btn hidden">查看上次结果</button>
@@ -27,7 +36,7 @@
 
       <div class="card small-note">
         <h3>你会看到什么？</h3>
-        <p>测试完成后，会看到你的可能类型、主导/辅助/第三/第四功能、八维得分和简单解释。</p>
+        <p>测试完成后，会看到你的可能类型、可信度、相似类型、主导/辅助/第三/第四功能、八维得分和更完整的解释。</p>
       </div>
     </section>
 
@@ -77,5 +86,6 @@
   </main>
 
   <script src="script.js"></script>
+  <script src="enhancements.js"></script>
 </body>
 </html>
