@@ -41,7 +41,7 @@ baseQuestions.splice(0, baseQuestions.length,
   {
     text: "原本计划好的安排突然变了，你更容易……",
     options: [
-      { label: "先不太舒服，想重新确认时间、顺序和接下来怎么稳定下来。", scores: { Si: 2 } },
+      { label: "先想起以前类似情况是怎么处理的，再重新确认时间、顺序和稳妥做法。", scores: { Si: 2 } },
       { label: "先看现在现场还能怎么做，边应对边调整。", scores: { Se: 2 } }
     ]
   },
@@ -69,7 +69,7 @@ baseQuestions.splice(0, baseQuestions.length,
   {
     text: "任务突然变得很乱、时间也很紧时，你更容易……",
     options: [
-      { label: "想先回到熟悉流程里，把细节、顺序和已知经验重新确认一遍。", scores: { Si: 2 } },
+      { label: "先找回以前验证过的流程，把已知步骤和关键细节重新排稳。", scores: { Si: 2 } },
       { label: "先动手处理眼前最明显的问题，边做边根据现场情况调整。", scores: { Se: 1, Te: 1 } }
     ]
   },
@@ -97,7 +97,7 @@ baseQuestions.splice(0, baseQuestions.length,
   {
     text: "去一个没去过的地方办事时，你更容易……",
     options: [
-      { label: "提前查路线、流程和注意事项，希望心里有个稳定预期。", scores: { Si: 2 } },
+      { label: "先查有没有类似流程、别人过去怎么做，再按可靠步骤去办。", scores: { Si: 2 } },
       { label: "到了现场再看情况，根据指示、环境和现场反馈调整。", scores: { Se: 2 } }
     ]
   },
@@ -118,6 +118,16 @@ baseQuestions.splice(0, baseQuestions.length,
 );
 
 const dynamicConfirmGroups = {
+  "ESFJ|INFJ": [
+    { text: "当一群人气氛不太对时，你更容易……", options: [
+      { label: "先感受到现场哪里不舒服，想让大家马上顺一点、别尴尬。", scores: { Fe: 2, Si: 1 } },
+      { label: "先在心里判断这是不是长期积累的问题，关系背后真正卡在哪里。", scores: { Ni: 2, Fe: 1 } }
+    ]},
+    { text: "面对一个反复出现的人际问题时，你更容易……", options: [
+      { label: "想参考过去有效的方法，先把关系和秩序稳定下来。", scores: { Si: 2, Fe: 1 } },
+      { label: "想找出背后的关系模式，判断问题为什么总是重复出现。", scores: { Ni: 2, Fe: 1 } }
+    ]}
+  ],
   "INFJ|INFP": [
     { text: "朋友反复向你倾诉一段关系问题时，你更容易……", options: [
       { label: "一边听一边判断这段关系的走向，以及怎样说能让局面缓和。", scores: { Ni: 1, Fe: 2 } },
